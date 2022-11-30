@@ -15,3 +15,37 @@ To download inputs and submit solutions just make a copy of the `.env.template` 
 ```sh
 cp .env.template .env
 ```
+
+Then install the dependencies, I've used `poetry` to manage the dependencies.
+
+```sh
+poetry install
+```
+
+## Solving a puzzle
+
+To solve a problem recursively copy the `day00` directory naming the new directory after the day you want to solve.
+So for example to solve day 1's problem do the following;
+
+```sh
+cp -r day00 day01
+cd day01
+```
+
+You can download the input for this day by running
+
+```sh
+poetry run aoc download-input
+```
+
+When you have solved the problem you can submit it by running the following command;
+
+```sh
+poetry run python part1.py input.txt | poetry run aoc submit --part 1
+```
+
+This will submit part 1 to submit part 2 do the following
+
+```sh
+poetry run python part2.py input.txt | poetry run aoc submit --part 2
+```
